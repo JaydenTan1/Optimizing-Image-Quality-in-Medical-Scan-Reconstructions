@@ -1,8 +1,44 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+const int N = 500; // Image Size N x N
+short Pixels[N][N];
+
+//Bresenham's Line Algorithm
+//Edit By: Ziyang Li
+//Date: 9/20/24
+//Description：Bresenham's Line Algorithm 1.0.
+void line1(int x1, int y1, int x2, int y2)
+{  
+    int dx, dy, p, x, y;  
+    dx=x2-x1;  
+    dy=y2-y1;  
+    x=x1;  
+    y=y1;  
+    p=2*dy-dx;  
+    while(x<x1)  
+    {  
+        if(p>=0)  
+        {  
+            Pixels[x][y] = 1;  
+            y=y+1;  
+            p=p+2*dy-2*dx;  
+        }  
+        else  
+        {  
+            Pixels[x][y] = 1;  
+            p=p+2*dy;}  
+            x=x+1;  
+        }  
+}  
+
+
 //Bresenham's Line Algorithm
 //Edit By: Ziyang Li
 //Date: 9/20/24
 //Description：An improved version of Bresenham's Line Algorithm that addresses cases where the slope is negative and so on.
-void line(int x1, int y1, int x2, int y2)
+void line2(int x1, int y1, int x2, int y2)
 {
     int x, y, dx, dy, dx1, dy1, px, py, xe, ye, i;
     dx = x2 - x1;
