@@ -116,12 +116,12 @@ int main() {
   ray = 11;
   int x = n - 1, y = 0;
   for(y = 0; y < n; y++){
-    line1(x,y,x-y,0,ray,diagonalRays);
+    line2(x,y,x-y,0,ray,diagonalRays);
     ray++;
   }
   y = n - 1;
   for(x = y - 1; x >= 0; x--){
-    line1(x,y,0,y-x,ray,diagonalRays);
+    line2(x,y,0,y-x,ray,diagonalRays);
     ray++;
   }
 
@@ -130,12 +130,12 @@ int main() {
   x = 0;
   y = 0;
   for(y = 0; y < n; y++){
-    line1(x,y,y,x,ray,antiDiagonalRays);
+    line2(x,y,y,x,ray,antiDiagonalRays);
     ray++;
   }
   y = n - 1;
   for(x = 1; x < n; x++){
-    line1(x,y,y,x,ray,antiDiagonalRays);
+    line2(x,y,y,x,ray,antiDiagonalRays);
     ray++;
   }
 
