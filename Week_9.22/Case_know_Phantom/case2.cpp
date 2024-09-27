@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-#include "Display.h"
-#include "line_functions.h"
+#include "../Week_9.22/Display.h"
+#include "../Week_9.22/line_functions.h"
 using namespace std;
 
 const int N = 500;
