@@ -1,3 +1,8 @@
+//Reconstructing the Mystery Images
+//Edit By: Ziyang Li
+//Date: 9/27/24
+//Description：Only the measured data are known, by which an unknown image is reconstructed.
+
 #include <iostream>
 #include "../Week_9.22/Display.h"
 #include "../Week_9.22/line_functions.h"
