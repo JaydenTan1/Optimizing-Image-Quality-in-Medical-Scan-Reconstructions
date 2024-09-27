@@ -1,3 +1,8 @@
+//Reconstructing the Image M
+//Edit By: Ziyang Li
+//Date: 9/27/24
+//Description：An image M has been known, and a reconstructing of this image by simulating a CT scan.
+
 #include <iostream>
 #include "../Week_9.22/Display.h"
 #include "../Week_9.22/line_functions.h"
