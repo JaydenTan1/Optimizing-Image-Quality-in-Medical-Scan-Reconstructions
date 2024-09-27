@@ -1,3 +1,8 @@
+//Reconstructing the Image Z
+//Edit By: Ziyang Li
+//Date: 9/27/24
+//Description：An image Z has been known, and a reconstructing of this image by simulating a CT scan.
+
 #include <iostream>
 #include <vector>
 #include "../Week_9.22/Display.h"
