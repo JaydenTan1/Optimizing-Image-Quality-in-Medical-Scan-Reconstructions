@@ -1,9 +1,16 @@
+//Bresenham's line algorithm
+//Edit By: Ziyang Li
+//Date: 10/7/24
+//Description: Include three differen Bresenham's line algorithm.
+
+
 #ifndef LINE_FUNCTIONS_H
 #define LINE_FUNCTIONS_H
 
 #include <iostream>
 using namespace std;
 
+//Count the sum from line
 template <size_t n>
 int line1(int x1, int y1, int x2, int y2, int (&P)[n][n])
 {
@@ -93,7 +100,7 @@ int line1(int x1, int y1, int x2, int y2, int (&P)[n][n])
     return res;
 }
 
-
+//Each value in the array add a number
 template <size_t b>
 void line2(int x1, int y1, int x2, int y2, int ray, short (&P)[b][b])
 {
@@ -182,6 +189,7 @@ void line2(int x1, int y1, int x2, int y2, int ray, short (&P)[b][b])
     }
 }
 
+//Change value
 template <size_t n>
 void line3(int x1, int y1, int x2, int y2, int (&P)[n][n])
 {
