@@ -1,13 +1,11 @@
-// Rotation image
+// Generate sinogram
 // Edit By: Ziyang Li
-// Date: 10/10/24
-// Description: This file create three shape in one pics and rotate this from 0 - 180
+// Date: 10/13/24
+// Description: This file will convert a image into a sinogram
 
 #include <iostream>
 #include "Display.h"
 #include <cmath>
-#include <vector>
-#include <algorithm>
 #include "line_functions.h"
 using namespace std;
 
@@ -96,20 +94,21 @@ int main()
 
     Display image(Pixels, "output1");
 
+    //Array store data from 0 - 179 anagle
     int sinogram[n][n];
 
     for (int i = 0; i < n; i++)
     {
-        rotation(i);
+        rotation(i);//Rotate i anagle(0-179)
         for (int row = 0; row < n; row++)
         {
             int res = 0;
 
             for (int col = 0; col < n; col++)
             {
-                res += tracy[row][col];
+                res += tracy[row][col];// After rotation data store in tracy array
             }
-            sinogram[i][row] = res;
+            sinogram[i][row] = res;//i is row of sinogram, row is the col of sinogram.
         }
     }
 
@@ -117,14 +116,13 @@ int main()
 
     for(int i = 0; i < n; i++){
         int max2 = 0;
-        for(int j = 0; j < n; j++) max2 = max(max2, sinogram[i][j]);
+        for(int j = 0; j < n; j++) max2 = max(max2, sinogram[i][j]);// find max value in each col
         max1 = max(max1, max2);
     }
     
+    //data reduction
     for(int i = 0; i < n; i++){
-        
-        for(int j = 0; j < n; j++) sinogram[i][j] = sinogram[i][j] * 255 / max1;
-        
+        for(int j = 0; j < n; j++) sinogram[i][j] = sinogram[i][j] * 255 / max1;  
     }
     
 
